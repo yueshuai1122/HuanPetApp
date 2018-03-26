@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="huanpetapp.huanpetapp.CityScreeningActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:id="@+id/city_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="城市筛选"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_Ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="150dp"
+            android:layout_toRightOf="@id/textView1"
+            android:text="确定"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_serch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#e0e0e0"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_layout"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_city_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/image_search_city"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:hint=" 请输入城市中文或拼音"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/image_search_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <me.yokeyword.indexablerv.IndexableLayout
+
+        android:id="@+id/indexableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:indexBar_layout_width="40dp"
+        app:indexBar_selectedTextColor="@color/black"
+        app:indexBar_textColor="@color/black"
+        app:indexBar_textSize="14sp"
+        app:indexBar_textSpace="5dp" />
+</LinearLayout>
